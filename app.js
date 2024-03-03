@@ -25,16 +25,14 @@ var width = 1400 - margin.left - margin.right;
 var height = 800 - margin.top - margin.bottom;
 
 // Create SVG element
-const svg = d3
-  .select("#bar-chart-2")
+const svg = d3.select("#bar-chart-2")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
   .append("g")
   .attr("transform", "translate(150, 800)");
 
 // Create the y-axis scale.
-var y = d3
-  .scaleBand()
+var y = d3.scaleBand()
   .domain(data.map((d) => d.month))
   .range([0, height])
   .padding(0.3);
