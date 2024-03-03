@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BWSC Rainfall Visualization</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <h1> Average Total Rainfall (in inches) in South End, Boston, <br>
+    <h1 id="title-svg"> (WITH SVG) <br> 
+        Average Rainfall (in inches) in South End, Boston, <br>
         by Month, from 2011 to 2023
     </h1>
-    <svg width="800" height="600">
+    <svg id="bar-chart-1" width="1000" height="500">
         <g transform="translate(100, 20)">
             <!-- X-axis and Y-axis -->
             <line x1="50" y1="600" x2="1350" y2="600" style="stroke:white; stroke-width:2" />
@@ -32,18 +34,18 @@
 
             <!-- Data points and lines -->
             <g>
-              <rect x="51" y="10" width="685" height="30" fill="#a6cee3"></rect>
-              <rect x="51" y="60" width="680" height="30" fill="#1f78b4"></rect>  
-              <rect x="51" y="110" width="685" height="30" fill="#b2df8a"></rect>  
-              <rect x="51" y="160" width="955" height="30" fill="#33a02c"></rect>
-              <rect x="51" y="210" width="680" height="30" fill="#fb9a99"></rect>  
-              <rect x="51" y="260" width="960" height="30" fill="#e31a1c"></rect>  
-              <rect x="51" y="310" width="1010" height="30" fill="#fdbf6f"></rect>
-              <rect x="51" y="360" width="825" height="30" fill="#ff7f00"></rect>  
-              <rect x="51" y="410" width="820" height="30" fill="#cab2d6"></rect>  
-              <rect x="51" y="460" width="1150" height="30" fill="#6a3d9a"></rect>
-              <rect x="51" y="510" width="900" height="30" fill="#ffff99"></rect>                
-              <rect x="51" y="560" width="1240" height="30" fill="#b15928"></rect>               
+              <rect x="51" y="10" width="685" height="30" fill="lightgray"></rect>
+              <rect x="51" y="60" width="680" height="30" fill="lightgray"></rect>  
+              <rect x="51" y="110" width="685" height="30" fill="lightgray"></rect>  
+              <rect x="51" y="160" width="955" height="30" fill="#2991f2"></rect>
+              <rect x="51" y="210" width="680" height="30" fill="lightgray"></rect>  
+              <rect x="51" y="260" width="960" height="30" fill="#2991f2"></rect>  
+              <rect x="51" y="310" width="1010" height="30" fill="#2991f2"></rect>
+              <rect x="51" y="360" width="825" height="30" fill="lightgray"></rect>  
+              <rect x="51" y="410" width="820" height="30" fill="lightgray"></rect>  
+              <rect x="51" y="460" width="1150" height="30" fill="#2991f2"></rect>
+              <rect x="51" y="510" width="900" height="30" fill="lightgray"></rect>                
+              <rect x="51" y="560" width="1240" height="30" fill="#2991f2"></rect>               
             </g>
 
             <!-- Values on top of each bar -->
@@ -70,6 +72,13 @@
             <text x="1300" y="630" font-size="30" fill="white">5</text>
         </g>
     </svg>
+
+    <h1 id="title-d3"> (WITH D3.js) <br> 
+        Average Total Rainfall (in inches) in South End, Boston, <br>
+        by Month, from 2011 to 2023
+    </h1>
+
+    <svg id="bar-chart-2" width="800" height="600"></svg>
 
     <script src="app.js"></script>
 </body>
