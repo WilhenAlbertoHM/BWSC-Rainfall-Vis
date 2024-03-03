@@ -15,7 +15,12 @@ const data = [
 ];
 
 // Get the dimensions of the SVG.
-const margin = { top: 100, right: 20, bottom: 100, left: 100 };
+const margin = { 
+    top: 100, 
+    right: 20, 
+    bottom: 100, 
+    left: 100 
+};
 const width = 1400 - margin.left - margin.right;
 const height = 800 - margin.top - margin.bottom;
 
@@ -102,3 +107,4 @@ svg.append("text")
     .attr("fill", "white")
     .attr("font-weight", "bold")
     .text("Inches");
+    
