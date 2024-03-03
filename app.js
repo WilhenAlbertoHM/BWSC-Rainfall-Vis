@@ -29,7 +29,7 @@ const svg = d3.select("#bar-chart-2")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
   .append("g")
-  .attr("transform", "translate(150, 0)");
+  .attr("transform", "translate(100, 0)");
 
 // Create the y-axis scale.
 var y = d3.scaleBand()
