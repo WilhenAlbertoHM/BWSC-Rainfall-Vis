@@ -30,8 +30,11 @@ var vega = {
         "axis": { 
             "title": "Inches",
             "titleFontSize": 20,
-            "labelFontSize": 18
-        } 
+            "labelFontSize": 18,
+            "tickCount": 5,
+        },
+        "scale": { "domain": [0, 5] }
+ 
       },
       "y": { 
         "field": "month", 
